@@ -62,27 +62,20 @@ GEMINI_API_KEY=your_key_here
 Run this command from the **root directory** (the main `devops-polyglot-auditor` folder):
 ```bash
 # This installs dependencies for the Backend, Landing Page, and HUD all at once
-npm install && npm install --prefix backend && npm install --prefix frontend && npm install --prefix landing
+npm install
 ```
 
 ### 6. Launch the System
-You need to open **3 separate terminal windows** to keep all parts of the app running:
+Run this command from the **root directory**:
+```bash
+npm run dev
+```
+This will start the Backend, Landing Page, and Auditor HUD all at once.
 
-*   **Terminal 1 (The Engine):**
-    ```bash
-    cd backend
-    npm start
-    ```
-*   **Terminal 2 (The Gateway):**
-    ```bash
-    cd landing
-    npm run dev
-    ```
-*   **Terminal 3 (The Auditor HUD):**
-    ```bash
-    cd frontend
-    npm run dev
-    ```
+If you prefer to run them separately, you can use:
+*   **Backend:** `npm run backend`
+*   **Landing:** `npm run landing`
+*   **HUD:** `npm run frontend`
 
 ### 7. Start Auditing
 1. Open your browser to `http://localhost:3000`.

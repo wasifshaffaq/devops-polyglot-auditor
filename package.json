@@ -1,0 +1,19 @@
+{
+  "name": "devops-polyglot-auditor-root",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend",
+    "landing"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w backend\" \"npm run dev -w frontend\" \"npm run dev -w landing\"",
+    "start": "concurrently \"npm run start -w backend\" \"npm run dev -w frontend\" \"npm run start -w landing\"",
+    "backend": "npm run dev -w backend",
+    "frontend": "npm run dev -w frontend",
+    "landing": "npm run dev -w landing"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
